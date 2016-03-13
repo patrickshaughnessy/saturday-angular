@@ -1,12 +1,15 @@
 'use strict';
 
 angular.module('app')
-.factory('photoService', function($http, $localStorage){
+.factory('photoService', function($http, $localStorage, $timeout){
 
   var data = $localStorage.data || [];
 
   function getPhotos(){
-    return data // fetch the data from data source
+    // $http.get('/photourl')
+    return $timeout(function(){
+      return data // fetch the data from data source
+    }, 2000)
   }
 
   function savePhoto(photo){

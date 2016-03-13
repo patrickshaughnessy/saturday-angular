@@ -14,7 +14,7 @@ angular.module('app', ['ui.router', 'ngStorage'])
       controller: 'homeCtrl'
     })
     .state('hits', {
-      url: "/hits",
+      url: "/hits/:id?editing",
       templateUrl: "partials/hits.html"
     })
     .state('photos', {

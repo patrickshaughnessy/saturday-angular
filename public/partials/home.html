@@ -13,4 +13,17 @@
   <input name="url" type="url" placeholder="url" ng-model="photo.url" required>
   <button ng-click="upload()" ng-disabled="photoForm.$invalid">Upload photo</button>
 </form>
-{{photoForm.title.$touched}}
+
+
+<h1>Hits List</h1>
+<ul>
+  <li ui-sref="hits({id: 1, editing: true})">
+    <a>One</a>
+  </li>
+  <li ui-sref="hits({id: 2, editing: true})">
+    <a>Two</a>
+  </li>
+  <li ui-sref="hits({id: 3, editing: false})">
+    <a>Three</a>
+  </li>
+</ul>
