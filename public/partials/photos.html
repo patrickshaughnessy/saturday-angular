@@ -1,0 +1,14 @@
+<h1>Bieber has photos</h1>
+<a ui-sref="home">Home</a>
+<a ui-sref="hits">Greatest Hits</a>
+<a ui-sref="photos">Photos</a>
+<a ui-sref="members">Members Only</a>
+
+
+<br>
+
+<h1>Welcome to Bieber photos.</h1>
+<p ng-if="photos.length">Check out these cool photos</p>
+<p ng-if="!photos.length">Go to the home page to add photos</p>
+{{photos}}
+<img ng-src="{{photo.url}}" alt="" ng-repeat="photo in photos">
